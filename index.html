@@ -5,34 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yana的小天地</title>
     <style>
+        /* 全局样式 */
         body {
-            font-family: sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0;
             background-color: #f8f9fa;
+            line-height: 1.6;
         }
+
+        /* 头部区域（带头像） */
         .header {
             text-align: center;
             background-color: #2c3e50;
             color: white;
             padding: 40px 20px;
-            border-radius: 8px;
         }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        /* 内容区域 */
         .content {
-            margin-top: 30px;
-            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .welcome-section, .posts-section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        /* 文章卡片样式 */
+        .post-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        .post-card h3 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+        }
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .post-card a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .post-card a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- 头部（带头像） -->
     <div class="header">
+        <!-- 头像：把src改成你的图片地址，比如上传到仓库的assets文件夹里 -->
+        <img class="avatar" src="https://github.com/Olive-Yana.png" alt="Yana的头像">
         <h1>Yana的小天地</h1>
         <p>记录生活、阅读与成长的碎碎念</p>
     </div>
+
+    <!-- 主体内容 -->
     <div class="content">
-        <h2>👋 欢迎来到我的博客！</h2>
-        <p>这里会分享我的日常、阅读感悟和成长记录。</p>
+        <!-- 欢迎语 -->
+        <div class="welcome-section">
+            <h2>👋 欢迎来到我的小天地！</h2>
+            <p>这里会分享我的日常、阅读感悟和成长记录，也会记录一些让我心动的瞬间。</p>
+            <p>如果你也喜欢慢下来记录生活，欢迎常来逛逛~</p>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="posts-section">
+            <h2>📝 最近更新</h2>
+            <div class="post-card">
+                <h3><a href="#">我的第一篇博客</a></h3>
+                <div class="post-date">2026-04-23</div>
+                <p>记录了我为什么想写博客，还有对未来的小计划~</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
